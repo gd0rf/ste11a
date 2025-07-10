@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hey Stella ❤️</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffe6e6, #ffe0f0);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #d6336c;
+      margin-bottom: 1rem;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #yesBtn {
+      background-color: #ff66a3;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: #ccc;
+      color: #333;
+    }
+
+    #yesBtn:hover {
+      background-color: #ff3385;
+    }
+
+    #noBtn:hover {
+      background-color: #aaa;
+    }
+
+    #response {
+      margin-top: 30px;
+      font-size: 1.5rem;
+      color: #cc0066;
+    }
+  </style>
+</head>
+<body>
+  <h1>Stella, will you be my girlfriend? 💖</h1>
+
+  <div class="button-container">
+    <button id="yesBtn">Yes 💘</button>
+    <button id="noBtn">No 😢</button>
+  </div>
+
+  <div id="response"></div>
+
+  <script>
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    const responseDiv = document.getElementById('response');
+
+    yesBtn.addEventListener('click', () => {
+      responseDiv.textContent = "Yay! 💕 You just made my day, Stella!";
+    });
+
+    noBtn.addEventListener('click', () => {
+      responseDiv.textContent = "Oh no 😭 But I’m not giving up that easy!";
+      noBtn.remove(); // This line makes the No button disappear
+    });
+  </script>
+</body>
+</html>
